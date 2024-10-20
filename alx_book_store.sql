@@ -1,4 +1,4 @@
-CREATE DATABASE alx_book_store;
+CREATE DATABASE IF NOT EXISTS alx_book_store;
 USE alx_book_store;
 
 CREATE TABLE Authors (
@@ -44,5 +44,4 @@ CREATE TABLE Order_Details (
     CONSTRAINT fk_book FOREIGN KEY (book_id)
     REFERENCES Books(book_id)
     ON DELETE CASCADE
-    ON UPDATE CASCADE
-)
+    ON UPDATE CASCADE)
