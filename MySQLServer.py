@@ -21,14 +21,14 @@ def create_database():
         # 1. Connect to the MySQL server (without specifying a database initially)
         db_connection = mysql.connector.connect(**config)
         cursor = db_connection.cursor()
-        
+
         print(f"Successfully connected to the MySQL server.")
 
         create_db_query = f"CREATE DATABASE IF NOT EXISTS {DATABASE_NAME}"
-        
+
         cursor.execute(create_db_query)
-        
-    
+
+
         print(f"Database '{DATABASE_NAME}' created successfully!")
 
 
@@ -40,7 +40,7 @@ def create_database():
             print(f"Error: Failed to connect to DB - Database does not exist.")
         else:
             print(f"Error: Failed to connect to DB - {err}")
-    
+
     finally:
         # 4. Handle open and close of the DB connection
         if db_connection and db_connection.is_connected():
@@ -50,3 +50,7 @@ def create_database():
 
 if __name__ == "__main__":
     create_database()
+~
+~
+~
+
