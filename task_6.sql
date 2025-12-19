@@ -1,5 +1,3 @@
--- Use the database provided as an argument
--- This script inserts multiple records into the 'customer' table
 
 INSERT INTO customer (customer_id, customer_name, email, address)
 VALUES 
